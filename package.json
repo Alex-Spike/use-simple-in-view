@@ -1,0 +1,107 @@
+{
+  "name": "use-simple-in-view",
+  "version": "1.0.0",
+  "description": "Simple React Hook is for monitoring when an element is in the viewport",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "files": [
+    "lib/"
+  ],
+  "author": {
+    "name": "Alexey Nikiforov",
+    "url": "https://www.alexey-nikiforov.name"
+  },
+  "repository": "https://github.com/Alex-Spike/use-simple-in-view",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react hook",
+    "react hooks",
+    "hook",
+    "hooks",
+    "inview",
+    "in view",
+    "in-view",
+    "is in viewport",
+    "use in view",
+    "use-simple-use-in-view",
+    "in viewport",
+    "viewport",
+    "virtual scroll"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && rollup -c",
+    "test": "jest",
+    "prepare": "npm test && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/react-hooks": "^3.7.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^16.14.0",
+    "rollup": "^2.35.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "setupFilesAfterEnv": [],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/test"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
